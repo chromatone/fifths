@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fifths-cache-v.0.1.0';
+const CACHE_NAME = 'fifths-cache-v.0.1.1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
