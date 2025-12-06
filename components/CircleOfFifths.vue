@@ -257,6 +257,7 @@ function handleTouchEnd({ event }) {
       font-weight="bold"
       )
       text {{ guessChords[0] }}
+      text.text-2px.op-50.font-normal(dy="4" v-if="guessChords.slice(1).length") ({{ guessChords.slice(1).join(', ') }})
     g.cursor-pointer(
       transform="translate(10,90)"
       @pointerdown="state.seventh = !state.seventh"

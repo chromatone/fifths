@@ -27,7 +27,7 @@ const started = ref(false)
       button.max-w-30ch.p-2.bg-light-800.hover-bg-light-100.transition.text-dark-800.text-2xl.rounded-2xl.shadow-lg(@click="started = true") START
 
       .flex.flex-wrap.gap-4(style="flex: 1 1 300px")
-        .text-sm.max-w-55ch.prose
+        .text-sm.max-w-55ch.prose.text-white
           p The circle of fifths organizes pitches in a sequence of perfect fifths, generally shown as a circle with the pitches (and their corresponding keys) in a clockwise progression. Musicians and composers often use the circle of fifths to describe the musical relationships between pitches. Its design is helpful in composing and harmonizing melodies, building chords, and modulating to different keys within a composition. 
 
           p Moving counterclockwise, the pitches descend by a fifth, but ascending by a perfect fourth will lead to the same note an octave higher (therefore in the same pitch class). Moving counter-clockwise from C could be thought of as descending by a fifth to F, or ascending by a fourth to F.
