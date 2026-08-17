@@ -1,9 +1,9 @@
 {
 	"name": "chromatone-circle-of-fifths",
 	"description": "Interactive circle of fifths web-app",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"year": 2024,
-	"homepage": "https://fifths.chromatone.center",
+	"homepage": "https://fifths.chromatone.center/",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/chromatone/fifths.git"
@@ -23,9 +23,9 @@
 	"author": "Davay42",
 	"type": "module",
 	"engines": {
-		"node": "^20.x"
+		"node": "^24.x"
 	},
-	"packageManager": "pnpm@10.24.0",
+	"packageManager": "pnpm@11.3.0",
 	"scripts": {
 		"dev": "vite --host",
 		"build": "vite build",
@@ -33,24 +33,24 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@unocss/reset": "^66.5.10",
-		"@vueuse/core": "^14.1.0",
+		"@unocss/reset": "^66.7.0",
+		"@vueuse/core": "^14.3.0",
 		"@vueuse/gesture": "^2.0.0",
-		"@vueuse/math": "^14.1.0",
+		"@vueuse/math": "^14.3.0",
 		"colord": "^2.9.3",
 		"floating-vue": "^5.2.2",
-		"tonal": "^6.4.2",
-		"use-chromatone": "^3.0.2",
-		"vue": "^3.5.25",
-		"webmidi": "^3.1.14"
+		"tonal": "^6.4.3",
+		"use-chromatone": "^3.0.5",
+		"vue": "^3.6.0-beta.17",
+		"webmidi": "^3.1.16"
 	},
 	"devDependencies": {
-		"@unocss/extractor-pug": "^66.5.10",
-		"@vitejs/plugin-vue": "^6.0.2",
-		"@vue/language-plugin-pug": "^3.1.6",
-		"pug": "^3.0.3",
-		"unocss": "^66.5.10",
-		"vite": "^7.2.6",
-		"vite-plugin-singlefile": "^2.3.0"
+		"@unocss/extractor-pug": "^66.7.0",
+		"@vitejs/plugin-vue": "^6.0.7",
+		"@vue/language-plugin-pug": "^3.3.2",
+		"pug": "^3.0.4",
+		"unocss": "^66.7.0",
+		"vite": "^8.0.14",
+		"vite-plugin-singlefile": "^2.3.3"
 	}
 }

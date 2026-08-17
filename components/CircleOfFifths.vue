@@ -313,8 +313,8 @@ function handleTouchEnd({ event }) {
             :cy="50"
             :from="(i - 1) / 12 * 360 + 15"
             :to="(i) / 12 * 360 + 15"
-            :radius="40 - 10 * getRadius(qual)"
-            :thickness="10"
+            :radius="40 - 12 * getRadius(qual)"
+            :thickness="12"
             :op="Math.abs(tonic - i) == 11 || Math.abs(tonic - i) % 12 <= 1 ? 0.8 : 0.1"
             :fill="Math.abs(tonic - i) == 11 || Math.abs(tonic - i) % 12 <= 1 ? noteColor(note.pitch) : noteColor(note.pitch, 2, 1)"
             )
@@ -331,14 +331,14 @@ function handleTouchEnd({ event }) {
               :cy="50"
               :from="(i - 1) / 12 * 360 + 15 + 15 * (j % 2)"
               :to="(i) / 12 * 360 + 15 * (j % 2)"
-              :radius="40 - 10 * getRadius(qual) - 5 * (j > 1 ? 0 : 1)"
-              :thickness="5"
+              :radius="40 - 12 * getRadius(qual) - 6 * (j > 1 ? 0 : 1)"
+              :thickness="6"
               :op="Math.abs(tonic - i) == 11 || Math.abs(tonic - i) % 12 <= 1 ? activeChroma[(note.pitch + deg) % 12] == 1 ? .7 : .3 : activeChroma[(note.pitch + deg) % 12] == 1 ? .2 : 0.1"
               :fill="Math.abs(tonic - i) == 11 || Math.abs(tonic - i) % 12 <= 1 ? noteColor(note.pitch + deg, 5) : noteColor(note.pitch + deg, 5, 1)"
               )
           circle.transition(
-            :cx="getCircleCoord(i, 12, 42 - getRadius(qual) * 26).x",
-            :cy="getCircleCoord(i, 12, 42 - getRadius(qual) * 26).y",
+            :cx="getCircleCoord(i, 12, 42 - getRadius(qual) * 28).x",
+            :cy="getCircleCoord(i, 12, 42 - getRadius(qual) * 28).y",
             :r="2"
             :fill="noteColor(note.pitch, 4, 1, 1)"
             class="opacity-20 hover-opacity-80"
@@ -352,20 +352,20 @@ function handleTouchEnd({ event }) {
             )
             circle.note.opacity-80.hover-opacity-100(
               style="transition: all 300ms ease-out;transform-box: fill-box; transform-origin: center center;"
-              :cx="getCircleCoord(i, 12, 35 - getRadius(qual) * 12).x",
-              :cy="getCircleCoord(i, 12, 35 - getRadius(qual) * 12).y",
+              :cx="getCircleCoord(i, 12, 34 - getRadius(qual) * 12).x",
+              :cy="getCircleCoord(i, 12, 34 - getRadius(qual) * 12).y",
               r="5",
               :fill="Math.abs(tonic - i) == 11 || Math.abs(tonic - i) % 12 <= 1 ? noteColor(note.pitch, 4) : noteColor(note.pitch, 5, 1, 0.5)",
-            )
+              )
           text.pointer-events-none(
             style="user-select:none;transition:all 300ms ease"
             :fill="colord(noteColor(note.pitch, 4)).isDark() ? 'white' : 'white'"
             font-size="3px"
             text-anchor="middle",
             dominant-baseline="middle"
-            :x="getCircleCoord(i, 12, 35 - getRadius(qual) * 12).x",
-            :y="getCircleCoord(i, 12, 35 - getRadius(qual) * 12).y + 0.5",
-          ) {{ note.name }}{{ getChordType(qual) }}
+            :x="getCircleCoord(i, 12, 34 - getRadius(qual) * 12).x",
+            :y="getCircleCoord(i, 12, 34 - getRadius(qual) * 12).y + 0.5",
+            ) {{ note.name }}{{ getChordType(qual) }}
 
     g.transition-all.duration-300.ease-out(
       ref="selector"
@@ -377,8 +377,8 @@ function handleTouchEnd({ event }) {
         :cy="50"
         :from="(-2) / 12 * 360 + 15"
         :to="(+ 1) / 12 * 360 + 15"
-        :radius="44.5"
-        :thickness="31"
+        :radius="45"
+        :thickness="35"
         :sWidth=".5"
         stroke="#fff3"
         fill="none"
@@ -393,7 +393,7 @@ function handleTouchEnd({ event }) {
       circle.transition-all.duration-300.cursor-pointer(
         v-if="scaleType != 'major'"
         :cx="50"
-        :cy="34"
+        :cy="36"
         :r="2"
         :fill="noteColor(minors[tonic].pitch, 4)"
       )
@@ -408,10 +408,10 @@ function handleTouchEnd({ event }) {
           font-size="2.5px"
           text-anchor="middle",
           dominant-baseline="middle"
-          :x="getCircleCoord(n - 1, 12, 42 - idx * 26).x",
-          :y="getCircleCoord(n - 1, 12, 42 - idx * 26).y + 0.25",
-          :style="{ transform: `rotate(${-(tonic) * 30}deg)`, transformOrigin: `${getCircleCoord(n - 1, 12, 42 - idx * 26).x}px ${getCircleCoord(n - 1, 12, 42 - idx * 26).y}px` }"
-        ) {{ step }}
+          :x="getCircleCoord(n - 1, 12, 42 - idx * 28).x",
+          :y="getCircleCoord(n - 1, 12, 42 - idx * 28).y + 0.25",
+          :style="{ transform: `rotate(${-(tonic) * 30}deg)`, transformOrigin: `${getCircleCoord(n - 1, 12, 42 - idx * 28).x}px ${getCircleCoord(n - 1, 12, 42 - idx * 28).y}px` }"
+          ) {{ step }}
 </template>
 
 <style lang="postcss" scoped>

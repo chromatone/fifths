@@ -1,5 +1,7 @@
-ignoredBuiltDependencies:
-  - vue-demi
-
-onlyBuiltDependencies:
-  - esbuild
+allowBuilds:
+  '@swc/core': true
+  core-js: true
+  esbuild: true
+  midi-writer-js: true
+  sharp: true
+  vue-demi: true
